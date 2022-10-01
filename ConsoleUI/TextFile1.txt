@@ -1,7 +1,9 @@
-﻿create table Cars(
+﻿create database RentACarProject
+create table Cars(
      CarId int Primary Key Identity(1,1),
 	 BrandId int not null,
 	 ColorId int not null,
+	 CarName nvarchar(50) not null,
 	 ModelYear int not null,
 	 DailyPrice decimal not null,
 	 Description nvarchar(50) 
@@ -9,13 +11,15 @@
 );
 
 create table Colors(
-     ColorId int Primary Key Identity(1,1),
+     Id int Primary Key Identity(1,1),
+     ColorId int ,
 	 ColorName nvarchar(50) not null
 	 
 );
 
 create table Brands(
-     BrandId int Primary Key Identity(1,1),
+     Id int Primary Key Identity(1,1),
+     BrandId int,
 	 BrandName nvarchar(50) not null
 	 
 );
